@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
     
     var viewModel = ViewModel()
     
@@ -27,10 +28,12 @@ class ViewController: UIViewController {
         // Binding textField to label via viewModel.
         textField.rx_text.subscribeNext { [unowned self] text in
             self.viewModel.text.value = text
-            print(self.viewModel.text.value)
         }.addDisposableTo(disposeBag)
         viewModel.text.asObservable().bindTo(label.rx_text).addDisposableTo(disposeBag)
         
+        button.rx_tap
+            .subscribeNext { [unowned self] in print(self.viewModel.text.value) }
+            .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {

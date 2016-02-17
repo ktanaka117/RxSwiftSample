@@ -34,10 +34,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf5-hO-KR5">
+                                <rect key="frame" x="60" y="211" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YTv-ON-5Kt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zf5-hO-KR5" firstAttribute="top" secondItem="eoQ-ce-lZI" secondAttribute="bottom" constant="40" id="E1y-zA-ArR"/>
                             <constraint firstItem="eoQ-ce-lZI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FXo-Pb-Grk"/>
+                            <constraint firstItem="zf5-hO-KR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M65-TC-ubx"/>
                             <constraint firstItem="vpz-Ou-Hjm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="NPF-ne-Bgx"/>
                             <constraint firstItem="eoQ-ce-lZI" firstAttribute="top" secondItem="vpz-Ou-Hjm" secondAttribute="bottom" constant="40" id="Vzm-OH-S3x"/>
                             <constraint firstItem="vpz-Ou-Hjm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvY-5z-5GW"/>
@@ -45,6 +54,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="button" destination="zf5-hO-KR5" id="vho-cT-Q5i"/>
                         <outlet property="label" destination="eoQ-ce-lZI" id="gJL-4o-Lba"/>
                         <outlet property="textField" destination="vpz-Ou-Hjm" id="zE5-2q-fZW"/>
                     </connections>
